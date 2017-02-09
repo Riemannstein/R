@@ -13,9 +13,14 @@ png("./dat1_plot.png")
 plot(dat1$V1, xlab="Period", ylab="dat1", main="Plot of time series in dat1.txt")
 dev.off()
 
-# Plot the acf function and save it to files
+# Plot the acf and save it to files
 png("./dat1_acf.png")
 plot(acf(dat1$V1),main="Sample ACF for dat1")
+dev.off()
+
+# Plot the pacf and save it to files
+png("./dat1_pacf.png")
+plot(pacf(dat1$V1),main="Sample PACF for dat1")
 dev.off()
 
 # Use AIC to determine the lag
